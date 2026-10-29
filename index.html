@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>At Your Convenience LLC | Freight Hauling</title>
+<meta name="description" content="At Your Convenience LLC is a freight carrier hauling parcel and general freight loads. Call (248) 835-5122.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sign: #006B3F;        /* highway sign green */
+    --sign-ink: #FFFFFF;
+    --stripe: #F2C200;      /* center-line yellow */
+    --asphalt: #2B2D2F;
+    --page: #ECEAE5;        /* concrete */
+    --text: #2B2D2F;
+    --muted: #5A5D60;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --page: #1C1E1F;
+      --text: #E9E7E2;
+      --muted: #A9ACAE;
+      --asphalt: #121314;
+      color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--page);
+    color: var(--text);
+    font-family: "Overpass", "Highway Gothic", "Arial Narrow", Arial, sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.55;
+  }
+  a { color: inherit; }
+  a:focus-visible { outline: 3px solid var(--stripe); outline-offset: 3px; }
+
+  /* Hero: the business name as a highway guide sign */
+  .road {
+    background: var(--asphalt);
+    padding: 4rem 1.25rem 0;
+  }
+  .sign {
+    max-width: 46rem;
+    margin: 0 auto;
+    background: var(--sign);
+    color: var(--sign-ink);
+    border: 6px solid var(--sign-ink);
+    outline: 6px solid var(--sign);
+    border-radius: 18px;
+    padding: 2.5rem 2rem 2rem;
+    text-align: center;
+    position: relative;
+  }
+  .sign h1 {
+    margin: 0;
+    font-weight: 800;
+    font-size: clamp(2.2rem, 7vw, 4rem);
+    line-height: 1.05;
+    letter-spacing: 0.01em;
+  }
+  .sign p {
+    margin: 0.75rem 0 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  .call {
+    display: inline-block;
+    background: var(--sign-ink);
+    color: var(--sign);
+    font-weight: 800;
+    font-size: clamp(1.4rem, 4.5vw, 2rem);
+    text-decoration: none;
+    padding: 0.5rem 1.25rem 0.35rem;
+    border-radius: 8px;
+  }
+  .call:hover { background: var(--stripe); color: var(--asphalt); }
+  .posts {
+    display: flex;
+    justify-content: center;
+    gap: 40%;
+    max-width: 46rem;
+    margin: 0 auto;
+  }
+  .posts span {
+    width: 14px;
+    height: 3rem;
+    background: #8A8D90;
+  }
+  .lane {
+    height: 10px;
+    margin-top: 0;
+    background: repeating-linear-gradient(90deg, var(--stripe) 0 60px, transparent 60px 110px);
+  }
+  .lane-wrap { background: var(--asphalt); padding: 1.5rem 0; }
+
+  main {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 3rem 1.25rem 4rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin: 2.5rem 0 0.5rem;
+    color: var(--text);
+  }
+  h2:first-child { margin-top: 0; }
+  ul { padding-left: 1.2rem; }
+  li { margin-bottom: 0.35rem; }
+  .contact-line { font-size: 1.4rem; font-weight: 800; margin: 0.25rem 0; }
+  footer {
+    background: var(--asphalt);
+    color: #C9CBCD;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-size: 0.95rem;
+  }
+</style>
+</head>
+<body>
+
+<header class="road">
+  <div class="sign">
+    <h1>At Your Convenience LLC</h1>
+    <p>Reliable freight hauling, on schedule</p>
+    <a class="call" href="tel:+12488355122">(248) 835-5122</a>
+  </div>
+  <div class="posts" aria-hidden="true"><span></span><span></span></div>
+</header>
+<div class="lane-wrap" aria-hidden="true"><div class="lane"></div></div>
+
+<main>
+  <h2>What we do</h2>
+  <p>At Your Convenience LLC is an owner-operated trucking company. We haul parcel and general freight loads to distribution centers and postal facilities, with on-time pickups and clear communication from dock to dock.</p>
+
+  <h2>Why shippers use us</h2>
+  <ul>
+    <li>Dependable, on-time delivery record</li>
+    <li>Direct line to the owner, no call center</li>
+    <li>Licensed and insured carrier</li>
+  </ul>
+
+  <h2>Get in touch</h2>
+  <p>Call or text for loads, rates, and availability.</p>
+  <p class="contact-line"><a href="tel:+12488355122">(248) 835-5122</a></p>
+  <!-- Optional: add these if you want them public -->
+  <!-- <p>Email: <a href="mailto:you@example.com">you@example.com</a></p> -->
+  <!-- <p>USDOT #0000000 &nbsp; MC #000000</p> -->
+</main>
+
+<footer>
+  &copy; <span id="yr">2026</span> At Your Convenience LLC
+</footer>
+
+<script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+</body>
+</html>
