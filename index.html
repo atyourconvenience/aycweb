@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>At Your Convenience LLC | Box Truck Freight Hauling</title>
+<meta name="description" content="At Your Convenience LLC is an owner-operated box truck carrier hauling parcel and general freight. Call or text (248) 835-5122.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #12233D; --navy-deep: #0B1729; --orange: #E8601C; --orange-dark: #C94E12;
+    --page: #FFFFFF; --alt: #F2F4F7; --text: #1F2933; --muted: #52606D; --line: #D9DEE5;
+    --head: "Oswald", "Arial Narrow", Impact, sans-serif;
+    --body: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --page: #121820; --alt: #1A222C; --text: #E4E7EB; --muted: #A9B3BE; --line: #2C3642; color-scheme: dark; }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { margin: 0; background: var(--page); color: var(--text); font-family: var(--body); font-size: 1.1rem; line-height: 1.6; }
+  h1, h2, h3 { font-family: var(--head); font-weight: 700; line-height: 1.15; margin: 0 0 .6rem; }
+  a:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
+  .wrap { max-width: 72rem; margin: 0 auto; padding: 0 1.25rem; }
+
+  /* Header + nav */
+  .topbar { background: var(--navy-deep); color: #fff; position: sticky; top: 0; z-index: 10; border-bottom: 3px solid var(--orange); }
+  .topbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding-top: .7rem; padding-bottom: .7rem; }
+  .brand { font-family: var(--head); font-weight: 700; font-size: 1.35rem; color: #fff; text-decoration: none; }
+  .brand span { color: var(--orange); }
+  nav ul { list-style: none; display: flex; gap: 1.5rem; margin: 0; padding: 0; }
+  nav a { color: #D5DCE5; text-decoration: none; font-weight: 600; }
+  nav a:hover { color: #fff; }
+  .topbar .phone { background: var(--orange); color: #fff; font-family: var(--head); font-weight: 500; text-decoration: none; padding: .35rem .9rem; border-radius: 4px; white-space: nowrap; }
+  @media (max-width: 900px) { nav { display: none; } }
+
+  .btn { display: inline-block; background: var(--orange); color: #fff; font-family: var(--head); font-weight: 500; font-size: 1.2rem; text-decoration: none; padding: .7rem 1.4rem; border-radius: 4px; }
+  .btn:hover { background: var(--orange-dark); }
+  .btn.ghost { background: transparent; border: 2px solid currentColor; padding: calc(.7rem - 2px) calc(1.4rem - 2px); }
+  .btn.ghost:hover { background: #fff; color: var(--navy); border-color: #fff; }
+  .actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+
+  /* Hero */
+  .hero { color: #fff; background:
+      linear-gradient(90deg, rgba(11,23,41,.94) 0%, rgba(11,23,41,.8) 45%, rgba(11,23,41,.35) 100%),
+      url("https://images.unsplash.com/photo-1485575301924-6891ef935dcd?auto=format&fit=crop&w=2000&q=70") center / cover no-repeat, #12233D; }
+  .hero .wrap { display: flex; align-items: center; min-height: min(78vh, 40rem); }
+  .hero-text { max-width: 38rem; padding: 4rem 0; }
+  .tagline { color: var(--orange); font-weight: 600; margin: 0 0 .75rem; }
+  .hero h1 { font-size: clamp(2.2rem, 4.6vw, 3.4rem); }
+  .hero p.lead { font-size: 1.2rem; color: #D5DCE5; max-width: 32rem; margin: 0 0 1.75rem; }
+  .road { height: 46px; background: #2B2F35; position: relative; }
+  .road::after { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 5px; margin-top: -2px;
+    background: repeating-linear-gradient(90deg, #F2C200 0 56px, transparent 56px 100px); }
+  @media (max-width: 760px) {
+    .hero { background-position: 70% center; }
+    .hero .wrap { min-height: 0; }
+    .hero-text { padding: 3rem 0; }
+  }
+
+  /* Sections */
+  section { padding: 4.5rem 0; }
+  section.alt { background: var(--alt); }
+  .kicker { text-align: center; color: var(--orange); font-weight: 600; margin: 0 0 .4rem; }
+  .section-title { font-size: clamp(1.8rem, 3.5vw, 2.4rem); text-align: center; }
+  .section-lead { text-align: center; color: var(--muted); max-width: 42rem; margin: 0 auto 2.75rem; }
+  .grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); }
+
+  .card { background: var(--page); border: 1px solid var(--line); border-radius: 4px; display: flex; flex-direction: column; overflow: hidden; }
+  .card img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; display: block; border-bottom: 4px solid var(--orange); background: var(--alt); }
+  .card .body { padding: 1.5rem; display: flex; flex-direction: column; flex: 1; }
+  .card h3 { font-size: 1.35rem; }
+  .card p { margin: 0 0 1rem; color: var(--muted); flex: 1; }
+  .card a { color: var(--orange); font-weight: 600; text-decoration: none; }
+  .card a:hover { text-decoration: underline; }
+
+  .who { border-left: 4px solid var(--navy); padding: .25rem 0 .25rem 1.25rem; }
+  @media (prefers-color-scheme: dark) { .who { border-left-color: var(--orange); } }
+  .who h3 { font-size: 1.3rem; }
+  .who p { margin: 0; color: var(--muted); }
+
+  .steps { counter-reset: step; }
+  .step { position: relative; padding-top: 4rem; }
+  .step::before { counter-increment: step; content: counter(step); position: absolute; top: 0; left: 0;
+    width: 3rem; height: 3rem; border-radius: 50%; background: var(--orange); color: #fff;
+    font-family: var(--head); font-size: 1.5rem; display: grid; place-items: center; }
+  .step h3 { font-size: 1.3rem; }
+  .step p { margin: 0; color: var(--muted); }
+  .center { text-align: center; margin-top: 2.75rem; }
+
+  .split { display: grid; grid-template-columns: 1.1fr 1fr; gap: 3rem; align-items: stretch; }
+  .split h2 { font-size: clamp(1.8rem, 3.5vw, 2.4rem); }
+  .checks { list-style: none; padding: 0; margin: 1.25rem 0 0; }
+  .checks li { padding-left: 1.9rem; position: relative; margin-bottom: .6rem; }
+  .checks li::before { content: ""; position: absolute; left: 0; top: .45rem; width: 1.1rem; height: .6rem;
+    border-left: 3px solid var(--orange); border-bottom: 3px solid var(--orange); transform: rotate(-45deg); }
+  .why-photo { width: 100%; height: 100%; min-height: 22rem; object-fit: cover; border-radius: 6px; display: block; background: var(--alt); }
+  .specs { margin-top: 2rem; background: var(--navy); color: #fff; border-radius: 6px; padding: 2rem; }
+  .specs h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+  .specs dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: .6rem 1.5rem; }
+  .specs dt { color: #AFC0D6; }
+  .specs dd { margin: 0; font-weight: 600; }
+  @media (max-width: 760px) { .split { grid-template-columns: 1fr; gap: 2rem; } }
+
+  .cta { background: var(--orange); color: #fff; text-align: center; padding: 4rem 0; }
+  .cta h2 { font-size: clamp(1.9rem, 4vw, 2.7rem); }
+  .cta p { margin: 0 auto 1.75rem; font-size: 1.2rem; max-width: 36rem; }
+  .cta .actions { justify-content: center; }
+  .cta .btn { background: var(--navy-deep); }
+  .cta .btn:hover { background: var(--navy); }
+  .cta .btn.ghost { background: transparent; }
+  .cta .btn.ghost:hover { background: #fff; color: var(--orange-dark); }
+
+  footer { background: var(--navy-deep); color: #AFC0D6; padding: 3rem 0 1.5rem; font-size: .98rem; }
+  .foot-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+  footer h3 { color: #fff; font-size: 1.15rem; }
+  footer ul { list-style: none; padding: 0; margin: 0; }
+  footer li { margin-bottom: .35rem; }
+  footer a { color: #fff; text-decoration: none; }
+  footer a:hover { color: var(--orange); }
+  .foot-bottom { border-top: 1px solid #22324A; padding-top: 1.25rem; font-size: .9rem; }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top">At Your <span>Convenience</span> LLC</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#who">Who we serve</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="phone" href="tel:+12488355122">(248) 835-5122</a>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-text">
+      <p class="tagline">Parcel freight • Box truck loads • Scheduled runs</p>
+      <h1>Dependable box truck freight hauling</h1>
+      <p class="lead">At Your Convenience LLC is an owner-operated carrier running a 26-foot straight truck for parcel and general freight. You get a direct line to the person driving your load, from pickup to drop.</p>
+      <div class="actions">
+        <a class="btn" href="tel:+12488355122">Call for a quote</a>
+        <a class="btn ghost" href="#services">See our services</a>
+      </div>
+    </div>
+
+  </div>
+  <div class="road" aria-hidden="true"></div>
+</div>
+
+<main>
+  <section id="services">
+    <div class="wrap">
+      <p class="kicker">Our services</p>
+      <h2 class="section-title">Freight moved right, on schedule</h2>
+      <p class="section-lead">From recurring parcel runs to one-off loads, we keep it simple: clear rates, on-time pickups and steady communication.</p>
+      <div class="grid">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1580674285054-bed31e145f59?auto=format&fit=crop&w=800&q=70" alt="Shipping boxes stacked inside a delivery vehicle" loading="lazy" width="800" height="533">
+          <div class="body">
+          <h3>Parcel delivery</h3>
+          <p>Scheduled parcel loads to distribution centers and postal facilities.</p>
+          <a href="#contact">Ask about parcel runs</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1586781383963-8e66f88077ec?auto=format&fit=crop&w=800&q=70" alt="Boxed freight ready for pickup" loading="lazy" width="800" height="533">
+          <div class="body">
+          <h3>Palletized freight</h3>
+          <p>General freight loads sized for a 26-foot enclosed box truck.</p>
+          <a href="#contact">Get a load quoted</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1616432043562-3671ea2e5242?auto=format&fit=crop&w=800&q=70" alt="Freight truck on the road" loading="lazy" width="800" height="533">
+          <div class="body">
+          <h3>Time-sensitive runs</h3>
+          <p>Tight delivery windows handled with updates along the way.</p>
+          <a href="#contact">Check availability</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="who">
+    <div class="wrap">
+      <p class="kicker">Who we serve</p>
+      <h2 class="section-title">Hauling for shippers, brokers and businesses</h2>
+      <p class="section-lead">If it fits in a 26-foot box, we can talk about moving it.</p>
+      <div class="grid">
+        <div class="who"><h3>Freight brokers</h3><p>A reliable carrier to cover box truck loads with good communication and clean paperwork.</p></div>
+        <div class="who"><h3>Distribution centers</h3><p>Recurring parcel and freight runs between facilities on a set schedule.</p></div>
+        <div class="who"><h3>Local businesses</h3><p>Deliveries and pickups when you need a truck without running your own fleet.</p></div>
+        <div class="who"><h3>Commercial shippers</h3><p>Palletized and boxed freight moved from dock to dock.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <p class="kicker">How it works</p>
+      <h2 class="section-title">Booking a load takes one call</h2>
+      <p class="section-lead">No forms, no call center. Here is what happens after you reach out.</p>
+      <div class="grid steps">
+        <div class="step"><h3>Call or text</h3><p>Share pickup and drop locations, what you’re shipping and when it needs to move.</p></div>
+        <div class="step"><h3>Get your rate</h3><p>We confirm availability, the details of the load and a straightforward price.</p></div>
+        <div class="step"><h3>Pickup</h3><p>We arrive on time, load up and keep you posted once the truck is rolling.</p></div>
+        <div class="step"><h3>Delivered</h3><p>Your freight is dropped on schedule, with confirmation when it’s done.</p></div>
+      </div>
+      <div class="center"><a class="btn" href="tel:+12488355122">Start with a call</a></div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap split">
+      <div>
+        <p class="kicker" style="text-align:left">Why choose us</p>
+        <h2>Built on showing up when promised</h2>
+        <p>Shipping only works when you can count on the carrier. As a small, owner-operated company, every load gets personal attention and every promise is one we intend to keep.</p>
+        <ul class="checks">
+          <li>Dependable on-time delivery record</li>
+          <li>Licensed and insured carrier</li>
+          <li>Direct line to the owner</li>
+          <li>Careful handling of every load</li>
+          <li>Clear communication from pickup to drop</li>
+        </ul>
+        <!-- Edit these to match the actual truck -->
+        <div class="specs">
+          <h3>Our equipment</h3>
+          <dl>
+            <dt>Truck</dt><dd>26-foot straight truck</dd>
+            <dt>Body</dt><dd>Enclosed dry box</dd>
+            <dt>Capacity</dt><dd>Up to 12 standard pallets</dd>
+          </dl>
+        </div>
+      </div>
+      <img class="why-photo" src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?auto=format&fit=crop&w=1200&q=70" alt="Package being handed off at delivery" loading="lazy">
+    </div>
+  </section>
+
+  <div class="cta" id="contact">
+    <div class="wrap">
+      <h2>Need a load moved?</h2>
+      <p>Call or text for rates and availability. We’ll get back to you quickly.</p>
+      <div class="actions">
+        <a class="btn" href="tel:+12488355122">Call (248) 835-5122</a>
+        <a class="btn ghost" href="sms:+12488355122">Send a text</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-cols">
+      <div>
+        <h3>At Your Convenience LLC</h3>
+        <p style="margin:0">Owner-operated box truck freight hauling.</p>
+        <!-- Optional: <p>USDOT #0000000 &nbsp; MC #000000</p> -->
+      </div>
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#who">Who we serve</a></li>
+          <li><a href="#how">How it works</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="tel:+12488355122">Call (248) 835-5122</a></li>
+          <li><a href="sms:+12488355122">Text (248) 835-5122</a></li>
+          <!-- <li><a href="mailto:you@example.com">you@example.com</a></li> -->
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">&copy; <span id="yr">2026</span> At Your Convenience LLC. All rights reserved. Photos from <a href="https://unsplash.com">Unsplash</a>.</div>
+  </div>
+</footer>
+
+<script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+</body>
+</html>
